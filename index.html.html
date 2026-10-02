@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="二種免許の学科試験に向けた効率的な勉強法を紹介するガイド">
+  <title>二種免許 一発合格を目指す！効率的な勉強法ガイド</title>
+
+  <style>
+    /* ========================================
+       基本設定
+    ======================================== */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f4f8f7;
+      color: #333;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Noto Sans JP",
+        "Yu Gothic",
+        "Hiragino Kaku Gothic ProN",
+        Meiryo,
+        sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* ========================================
+       ページ全体
+    ======================================== */
+
+    .page {
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      background: #fff;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    /* ========================================
+       ヘッダー
+    ======================================== */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(
+        145deg,
+        #dff2f0 0%,
+        #eaf5fb 55%,
+        #fff4e4 100%
+      );
+      padding: 38px 20px 34px;
+      text-align: center;
+      border-bottom: 1px solid #d9e9e6;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background: rgba(255,255,255,0.45);
+      border-radius: 50%;
+      top: -80px;
+      right: -60px;
+    }
+
+    .hero-badge {
+      position: relative;
+      display: inline-block;
+      padding: 6px 16px;
+      margin-bottom: 14px;
+      border-radius: 30px;
+      background: #fff;
+      color: #287c75;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      box-shadow: 0 3px 10px rgba(50,100,100,0.08);
+    }
+
+    .hero h1 {
+      position: relative;
+      margin: 0;
+      color: #245d67;
+      font-size: clamp(26px, 7vw, 38px);
+      line-height: 1.35;
+      letter-spacing: 0.02em;
+      font-weight: 800;
+    }
+
+    .hero h1 .accent {
+      color: #e97832;
+    }
+
+    .hero-message {
+      position: relative;
+      margin: 18px auto 0;
+      max-width: 600px;
+      color: #4b5c5d;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* ========================================
+       イラスト・画像プレースホルダー
+    ======================================== */
+
+    .illustration-box {
+      width: 100%;
+      max-width: 300px;
+      min-height: 150px;
+      margin: 24px auto 0;
+      border: 2px dashed #a8cbc7;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6b8d8a;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .illustration-box .placeholder-icon {
+      font-size: 48px;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .illustration-box p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    /* 実際の画像を入れる場合 */
+    .illustration-box img {
+      width: 100%;
+      max-width: 260px;
+      max-height: 180px;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+
+    /* ========================================
+       セクション
+    ======================================== */
+
+    section {
+      padding: 34px 0;
+    }
+
+    section + section {
+      border-top: 1px solid #e8eeee;
+    }
+
+    .section-title {
+      position: relative;
+      margin: 0 0 22px;
+      padding-left: 15px;
+      color: #285f68;
+      font-size: 23px;
+      line-height: 1.4;
+      font-weight: 800;
+    }
+
+    .section-title::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 3px;
+      bottom: 3px;
+      width: 5px;
+      border-radius: 5px;
+      background: #65aaa2;
+    }
+
+    /* ========================================
+       注意・スケジュール
+    ======================================== */
+
+    .schedule-card {
+      position: relative;
+      overflow: hidden;
+      padding: 24px 20px;
+      background: #fff7eb;
+      border: 2px solid #f1c68d;
+      border-radius: 18px;
+      box-shadow: 0 5px 16px rgba(120,90,50,0.07);
+    }
+
+    .schedule-label {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: #e97832;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .schedule-card p {
+      margin: 0;
+    }
+
+    .highlight {
+      display: inline;
+      padding: 2px 5px;
+      background: linear-gradient(
+        transparent 50%,
+        #ffe09d 50%
+      );
+      font-weight: 800;
+      color: #a9521f;
+    }
+
+    .big-highlight {
+      display: block;
+      margin: 16px 0 0;
+      padding: 12px;
+      text-align: center;
+      background: #fff;
+      border-radius: 12px;
+      color: #d85f25;
+      font-size: 21px;
+      line-height: 1.5;
+      font-weight: 800;
+    }
+
+    /* ========================================
+       4つのステップ
+    ======================================== */
+
+    .steps-intro {
+      margin: -8px 0 24px;
+      color: #586969;
+    }
+
+    .important-note {
+      margin-bottom: 22px;
+      padding: 16px;
+      background: #eef8f6;
+      border-left: 5px solid #65aaa2;
+      border-radius: 0 12px 12px 0;
+      color: #3e5f5c;
+      font-size: 16px;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .step-card {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 20px 17px;
+      background: #fff;
+      border: 1px solid #dce9e7;
+      border-radius: 17px;
+      box-shadow: 0 4px 14px rgba(60,100,100,0.07);
+    }
+
+    .step-number {
+      flex: 0 0 48px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #65aaa2;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .step-card:nth-child(2) .step-number {
+      background: #5c9ab0;
+    }
+
+    .step-card:nth-child(3) .step-number {
+      background: #e29a48;
+    }
+
+    .step-card:nth-child(4) .step-number {
+      background: #e97832;
+    }
+
+    .step-content {
+      flex: 1;
+    }
+
+    .step-content h3 {
+      margin: 0 0 6px;
+      color: #315e63;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .step-content p {
+      margin: 0;
+      color: #596767;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ========================================
+       学習ツール
+    ======================================== */
+
+    .tool-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .tool-card {
+      padding: 22px 18px;
+      border-radius: 18px;
+      background: #f5faf9;
+      border: 1px solid #d6e9e6;
+    }
+
+    .tool-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 13px;
+    }
+
+    .tool-icon {
+      flex: 0 0 44px;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #d9efeb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    .tool-card h3 {
+      margin: 0;
+      color: #2c6560;
+      font-size: 19px;
+      line-height: 1.4;
+    }
+
+    .tool-card p {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+
+    .point {
+      margin-top: 14px;
+      padding: 13px 15px;
+      background: #fff;
+      border-radius: 11px;
+      border-left: 4px solid #e49a48;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .point strong {
+      color: #b66624;
+    }
+
+    /* URLボタン */
+    .tool-link {
+      display: block;
+      width: 100%;
+      margin-top: 16px;
+      padding: 13px 15px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 12px;
+      background: #438f87;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1.5;
+      transition: opacity 0.2s ease;
+    }
+
+    .tool-link:hover {
+      opacity: 0.85;
+    }
+
+    .tool-link:active {
+      transform: translateY(1px);
+    }
+
+    /* ========================================
+       勉強の流れ
+    ======================================== */
+
+    .flow {
+      padding: 22px 18px;
+      background: #f7f9fc;
+      border-radius: 18px;
+    }
+
+    .flow-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0;
+      padding: 10px 0;
+    }
+
+    .flow-number {
+      flex: 0 0 34px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #6b9eaf;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .flow-arrow {
+      text-align: center;
+      color: #91aaa9;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    /* ========================================
+       最後のメッセージ
+    ======================================== */
+
+    .closing {
+      margin-top: 10px;
+      padding: 28px 20px;
+      background: linear-gradient(
+        145deg,
+        #e7f4f2,
+        #edf7fb
+      );
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .closing h2 {
+      margin: 0 0 12px;
+      color: #28656a;
+      font-size: 23px;
+      line-height: 1.5;
+    }
+
+    .closing p {
+      margin: 0;
+      color: #4e6263;
+      font-size: 16px;
+    }
+
+    /* ========================================
+       フッター
+    ======================================== */
+
+    footer {
+      padding: 25px 20px 35px;
+      text-align: center;
+      color: #7a8989;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    /* ========================================
+       PC・タブレット対応
+    ======================================== */
+
+    @media (min-width: 600px) {
+      body {
+        background: #eaf1f0;
+      }
+
+      .page {
+        margin: 25px auto;
+        border-radius: 22px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(50,80,80,0.12);
+      }
+
+      .container {
+        padding-left: 35px;
+        padding-right: 35px;
+      }
+
+      .hero {
+        padding: 50px 35px 45px;
+      }
+
+      section {
+        padding: 42px 0;
+      }
+
+      .steps {
+        gap: 18px;
+      }
+
+      .step-card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <div class="page">
+
+    <!-- ========================================
+         ヘッダー
+    ========================================= -->
+
+    <header class="hero">
+
+      <div class="hero-badge">
+        二種免許・学科試験対策
+      </div>
+
+      <h1>
+        二種免許<br>
+        <span class="accent">一発合格</span>を目指す！
+      </h1>
+
+      <p class="hero-message">
+        効率的な勉強法ガイド
+      </p>
+
+      <!--
+        ▼ここにイラストを配置できます
+
+        例：
+        <img src="taxi-study.png"
+             alt="タクシーの運転手が勉強しているイラスト">
+
+        現在はプレースホルダーです。
+      -->
+      <div class="illustration-box">
+        <div>
+          <div class="placeholder-icon">🚕</div>
+          <p>
+            ここにイラストを配置<br>
+            （二種免許・タクシー・勉強など）
+          </p>
+        </div>
+      </div>
+
+    </header>
+
+
+    <main class="container">
+
+      <!-- ========================================
+           挨拶
+      ========================================= -->
+
+      <section>
+
+        <h2 class="section-title">
+          教習生の皆様へ
+        </h2>
+
+        <p>
+          短期間で確実に合格するための
+          <strong>勉強のコツ</strong>をお伝えします。
+        </p>
+
+      </section>
+
+
+      <!-- ========================================
+           スケジュール注意点
+      ======================================== -->
+
+      <section>
+
+        <h2 class="section-title">
+          まずはスケジュールを確認！
+        </h2>
+
+        <div class="schedule-card">
+
+          <div class="schedule-label">
+            ⚠ 重要なお知らせ
+          </div>
+
+          <p>
+            6日間のカリキュラムのうち、
+            合格必須のテストは
+            <span class="highlight">【4日目】</span>
+            にあります。
+          </p>
+
+          <div class="big-highlight">
+            実質的に勉強できる期間は<br>
+            本日を含めて【たったの4日間】です！
+          </div>
+
+          <p style="margin-top:16px;">
+            限られた時間を有効に使って、
+            <strong>効率よく勉強を進めましょう。</strong>
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- ========================================
+           4つのステップ
+      ======================================== -->
+
+      <section>
+
+        <h2 class="section-title">
+          合格への4つのステップ
+        </h2>
+
+        <p class="steps-intro">
+          「解いて終わり」ではありません。<br>
+          間違えた問題を見直すことが、合格への近道です。
+        </p>
+
+        <div class="important-note">
+          <strong>💡 ポイント</strong><br>
+          ○×問題は、偶然当たってしまうことがあります。
+          だからこそ、<strong>復習が最も重要</strong>です。
+        </div>
+
+
+        <div class="steps">
+
+          <!-- STEP 1 -->
+          <article class="step-card">
+
+            <div class="step-number">1</div>
+
+            <div class="step-content">
+              <h3>問題を解く</h3>
+              <p>
+                まずは問題をどんどん解いて、
+                自分の理解度を確認しましょう。
+              </p>
+            </div>
+
+          </article>
+
+
+          <!-- STEP 2 -->
+          <article class="step-card">
+
+            <div class="step-number">2</div>
+
+            <div class="step-content">
+              <h3>教本で見直す</h3>
+              <p>
+                わからなかった問題・間違えた問題は、
+                必ず教本を開いて確認しましょう。
+              </p>
+            </div>
+
+          </article>
+
+
+          <!-- STEP 3 -->
+          <article class="step-card">
+
+            <div class="step-number">3</div>
+
+            <div class="step-content">
+              <h3>指導員へ質問する</h3>
+              <p>
+                自分だけでは理解できないところは、
+                そのままにせず、すぐに指導員へ質問しましょう。
+              </p>
+            </div>
+
+          </article>
+
+
+          <!-- STEP 4 -->
+          <article class="step-card">
+
+            <div class="step-number">4</div>
+
+            <div class="step-content">
+              <h3>繰り返し解く</h3>
+              <p>
+                同じ問題を繰り返し解いて、
+                最後は<strong>満点</strong>を目指しましょう。
+              </p>
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- ========================================
+           学習ツール
+      ======================================== -->
+
+      <section>
+
+        <h2 class="section-title">
+          おすすめ学習ツール
+        </h2>
+
+        <div class="tool-list">
+
+
+          <!-- ツール① -->
+          <article class="tool-card">
+
+            <div class="tool-header">
+
+              <div class="tool-icon">
+                📱
+              </div>
+
+              <h3>
+                ツール①<br>
+                練習問題サイト「武蔵」
+              </h3>
+
+            </div>
+
+            <p>
+              スマートフォンやパソコンから
+              練習問題にチャレンジできます。
+            </p>
+
+            <div class="point">
+              <strong>★ ここがポイント！</strong><br>
+              「2種問題」だけでなく、
+              <strong>「1種本免問題」も解く</strong>
+              のがおすすめです。
+            </div>
+
+            <!-- URL -->
+            <a
+              class="tool-link"
+              href="http://www.musasi.jp.shounandai/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              練習問題サイト「武蔵」を開く
+            </a>
+
+          </article>
+
+
+          <!-- ツール② -->
+          <article class="tool-card">
+
+            <div class="tool-header">
+
+              <div class="tool-icon">
+                📖
+              </div>
+
+              <h3>
+                ツール②<br>
+                自習室の問題集
+              </h3>
+
+            </div>
+
+            <p>
+              自習室にある問題集を使って、
+              実際の試験をイメージしながら
+              問題にチャレンジしましょう。
+            </p>
+
+            <div class="point">
+              <strong>★ 利用方法</strong><br>
+              自習室で原簿を提出し、
+              指導員から<strong>2種問題</strong>を借りて
+              チャレンジしてください。
+            </div>
+
+            <div class="point">
+              <strong>※ 注意</strong><br>
+              自習室内限定での利用となります。
+              解答用紙も用意されています。
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- ========================================
+           効率的な勉強の流れ
+      ======================================== -->
+
+      <section>
+
+        <h2 class="section-title">
+          迷ったら、この流れで！
+        </h2>
+
+        <div class="flow">
+
+          <div class="flow-item">
+            <div class="flow-number">1</div>
+            <div>まず問題を解く</div>
+          </div>
+
+          <div class="flow-arrow">↓</div>
+
+          <div class="flow-item">
+            <div class="flow-number">2</div>
+            <div>間違えた問題をチェック</div>
+          </div>
+
+          <div class="flow-arrow">↓</div>
+
+          <div class="flow-item">
+            <div class="flow-number">3</div>
+            <div>教本で確認する</div>
+          </div>
+
+          <div class="flow-arrow">↓</div>
+
+          <div class="flow-item">
+            <div class="flow-number">4</div>
+            <div>わからなければ指導員へ質問</div>
+          </div>
+
+          <div class="flow-arrow">↓</div>
+
+          <div class="flow-item">
+            <div class="flow-number">5</div>
+            <div><strong>もう一度解いて満点を目指す！</strong></div>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ========================================
+           最後のメッセージ
+      ======================================== -->
+
+      <section>
+
+        <div class="closing">
+
+          <h2>
+            4日間を有効に使って<br>
+            合格を目指しましょう！
+          </h2>
+
+          <p>
+            「問題を解く → 見直す → 質問する → 繰り返す」
+            このサイクルを大切にしてください。
+          </p>
+
+          <div class="illustration-box">
+
+            <div>
+              <div class="placeholder-icon">📚</div>
+              <p>
+                ここに応援イラストを配置できます
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- ========================================
+         フッター
+    ========================================= -->
+
+    <footer>
+      二種免許 学科試験対策<br>
+      効率よく学習して、一発合格を目指しましょう！
+    </footer>
+
+  </div>
+
+</body>
+</html>
